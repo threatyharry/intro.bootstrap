@@ -6,12 +6,18 @@
 .row-content{
     margin: 0px auto;
     padding: 50px 0px 50px 0px;
-    border-bottom: 1px ridge;
+    border-bottom: 1px;
     min-height: 400px;
 }
-
+.body{
+    background-color: #ffde03;
+}
 .footer{
-    background-color: #D1C4E9;
+    background-color:#ffee58;
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
+}
+
+.header{
+    background-color: #fbc02d;
 }
