@@ -1,3 +1,9 @@
+:root{
+    --primary-color:#eeeeee;
+    --secondry-color:#32e0c4;
+    --nav-color:#222831;
+    --footer-color:#393e46;
+}
 .row-header{
     margin: 0px auto;
     padding: 0px;
@@ -5,16 +11,16 @@
 
 .row-content{
     margin: 0px auto;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 10px 50px 10px;
     border-bottom: 1px;
     min-height: 400px;
 }
 .body{
-    background-color: #ffde03;
+    background-color:var(--primary-color);
     
 }
 .footer{
-    background-color:#ffee58;
+    background-color:var(--footer-color);
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
 }
@@ -22,4 +28,6 @@
 .header{
     background-color: #fbc02d;
 }
-
+.address{
+    color: var(--primary-color);
+}
