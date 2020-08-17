@@ -1,8 +1,12 @@
+@-ms-viewport
+{
+    width: device-width;
+}
 :root{
-    --primary-color:#eeeeee;
-    --secondry-color:#32e0c4;
-    --nav-color:#222831;
-    --footer-color:#393e46;
+    --primary-color:#fff;/*#eeeeee*/
+    --secondry-color:#9477CB;/*#32e0c4*/
+    --nav-color:#5133A5;/*#222831*/
+    --footer-color:#D1C5E8;/*#393e46*/
 }
 .row-header{
     margin: 0px auto;
@@ -34,4 +38,16 @@
 .tab-content{
     border: 1px #ddd solid;
     padding: 1em;
+}
+.carousel{
+    background-color: #5133A5;
+}
+.carousel-item{
+    height: 300px;
+}
+.carousel-item img{
+    position: absolute;
+    min-height: 300px;
+    left: 0;
+    top: 0;
 }
