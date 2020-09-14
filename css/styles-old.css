@@ -1,0 +1,59 @@
+@-ms-viewport
+{
+    width: device-width;
+}
+:root{
+    --primary-color:#fff;/*#eeeeee*/
+    --secondry-color:#9477CB;/*#32e0c4*/
+    --nav-color:#5133A5;/*#222831*/
+    --footer-color:#D1C5E8;/*#393e46*/
+}
+.row-header{
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.row-content{
+    margin: 0px auto;
+    padding: 50px 10px 50px 10px;
+    border-bottom: 1px;
+    min-height: 400px;
+}
+.body{
+    background-color:var(--primary-color);
+    
+}
+.footer{
+    background-color:var(--footer-color);
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.header{
+    background-color: #fbc02d;
+}
+.address{
+    color: var(--primary-color);
+}
+.tab-content{
+    border: 1px #ddd solid;
+    padding: 1em;
+}
+.carousel{
+    background-color: #5133A5;
+}
+.carousel-item{
+    height: 300px;
+}
+.carousel-item img{
+    position: absolute;
+    min-height: 300px;
+    left: 0;
+    top: 0;
+}
+#carouselButton{
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+}

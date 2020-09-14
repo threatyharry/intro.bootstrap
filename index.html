@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="\css\normalize.css">
     </head>
     <body class="body">
-        <nav class="navbar navbar-expand-sm mr-auto navbar-dark fixed-top" style="background-color:var(--nav-color);">
+        <!-- style="background-color:var(--nav-color);" -->
+        <nav class="navbar navbar-expand-sm mr-auto navbar-dark fixed-top" >
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarexpand">
                     <span class="navbar-toggler-icon"></span> 
@@ -26,8 +27,11 @@
                             <li class="nav-item" style="padding: 0px 10px 0px 0px;"><a class="nav-link" href="#"><span class="fa fa-list"></span> Menu</a></li>
                             <li class="nav-item" style="padding: 0px 10px 0px 0px;"><a class="nav-link" href="/contactus.html"><span class="fa fa-address-card"></span> Contact</a></li>   
                         </ul>
+                        <!-- data-target="#loginmodal" -->
+                        <!-- data-toggle="modal" -->
                         <span class="navbar-text">
-                            <a role="button" data-target="#loginmodal" data-toggle="modal">
+                            
+                            <a role="button" id="modal" >
                             <span class="fa fa-sign-in"></span>Login</a>
                         </span>
                     </div>
@@ -37,7 +41,8 @@
             <div class="modal-content modal-lg modal-dialog" role="content">
                 <div class="modal-header">
                     <h4>Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- data-dismiss="modal" -->
+                    <button type="button" class="close" id="modalhide">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -58,7 +63,9 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button class="btn btn-secondary ml-auto" data-dismiss="modal">cancel</button>
+                            <!-- data-dismiss="modal" -->
+                            <!-- id="modalhide" -->
+                            <button class="btn btn-secondary ml-auto" >cancel</button>
                             <button class="btn btn-primary ml-1">login</button>
                         </div>
                     </form>
@@ -72,7 +79,8 @@
             <div class="modal-content modal-lg modal-dialog" role="content">
                 <div class="modal-header">
                     <h4>Reserve Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- data-dismiss="modal" -->
+                    <button type="button" class="close" id="close">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -128,7 +136,8 @@
                         </div>    
                         <div class="form-row">
                             <div class="form-group row offset-2">
-                                <button class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                                <!-- data-dismiss="modal" -->
+                                <button class="btn btn-secondary" id="modalhide1">cancel</button>
                                 <button class="btn btn-primary ml-1">Reserve</button>
                             </div>
                         </div>
@@ -140,8 +149,8 @@
 
 
 
-
-        <header class="jumbotron mt-5" style="background-color:var(--secondry-color);color: #fff; margin-top:4%; ">
+        <!--style="background-color:var(--secondry-color);color: #fff; margin-top:4%; "-->
+        <header class="jumbotron" >
             <div class="container">
                 <div class="row">
                   <div class="col-12 col-sm-5">
@@ -152,7 +161,9 @@
                         <img src="img/logo.png" class="d-flex">
                     </div>
                     <div class="col-12 col-sm-3">
-                        <a href="#reservetable" role="button" data-toggle="modal" class="btn btn-warning btn-block">Reserve Table</a>
+                        <!-- data-toggle="modal" -->
+                        <!-- href="#reservetable" -->
+                        <a  role="button" id="reserve" class="btn btn-warning btn-block">Reserve Table</a>
                         <!-- <button type="button" 
                         class="btn btn-warning pl-5 pr-5 mt-5"
                         data-toggle="tooltip" data-html="true" 
@@ -385,6 +396,34 @@
                     $("#mycarousel").carousel('cycle');
                 });
             });
+
+            $(document).ready(function(){
+                $("#modal").click(function(){
+                    $("#loginmodal").modal('toggle');
+                });
+            });
+            $(document).ready(function(){
+                $("#modalhide").click(function(){
+                    $("#loginmodal").modal("hide");
+                });
+            });
+
+            $(document).ready(function(){
+                $("#reserve").click(function(){
+                    $("#reservetable").modal();
+                });
+            });
+            $(document).ready(function(){
+                $("#modalhide1").click(function(){
+                    $("#reservetable").modal("toggle");
+                });
+            });
+            $(document).ready(function(){
+                $("#close").click(function(){
+                    $("#reservetable").modal("hide");
+                });
+            });
+
         </script>
     
         <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script> -->
